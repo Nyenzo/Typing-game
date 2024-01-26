@@ -70,7 +70,7 @@ document.getElementById('start').addEventListener('click', () => {
     // Start the timer
     startTime = new Date().getTime();
   });
-  
+
 typedValueElement.addEventListener('input', () => {
     // Get the current word
     const currentWord = words[wordIndex];
@@ -104,3 +104,17 @@ typedValueElement.addEventListener('input', () => {
       typedValueElement.className = 'error';
     }
   });
+document.getElementById('start').addEventListener('click', () => {
+    // Enable the input event listener
+    typedValueElement.addEventListener('input', handleInput);
+    // Reset the game state
+    words = [];
+    wordIndex = 0;
+    startTime = Date.now();
+    messageElement.innerText = '';
+    typedValueElement.value = '';
+    // Generate a new set of words
+    generateWords();
+    // Display the first word
+    displayWord();
+});
