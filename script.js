@@ -41,6 +41,7 @@ let startTime = Date.now();
 const quoteElement = document.getElementById('quote');
 const messageElement = document.getElementById('message')
 const typedValueElement = document.getElementById('typed-value');
+const highscoreElement = document.getElementById('highscore');
 
 document.getElementById('start').addEventListener('click', function () {
 	// get a quote
@@ -84,6 +85,16 @@ typedValueElement.addEventListener('input', (e) => {
 		const elapsedTime = new Date().getTime() - startTime;
 		const message = `CONGRATULATIONS! You finished in ${elapsedTime / 1000} seconds.`;
 		messageElement.innerText = message;
+
+		// Check if the current score is higher than the highscore
+		const highscore = localStorage.getItem('highscore');
+		if (!highscore || elapsedTime < highscore) {
+			// Update the highscore
+			localStorage.setItem('highscore', elapsedTime);
+			// Display a message about the new highscore
+			const highscoreMessage = `New Highscore: ${elapsedTime / 1000} seconds!`;
+			highscoreElement.innerText = highscoreMessage;
+		}
 	} else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
 		// end of word
 		// clear the typedValueElement for the new word
@@ -104,4 +115,5 @@ typedValueElement.addEventListener('input', (e) => {
 		// error state
 		typedValueElement.className = 'error';
 	}
+	
 });
