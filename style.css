@@ -1,68 +1,88 @@
-.highlight {
-    background-color: yellow;
-  }
-  
-.error {
-    background-color: lightcoral;
-    border: red;
-  }
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-    margin-top: 50px;
-}
-
-p {
-    text-align: center;
-    color: #666;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-#quote {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#message {
-    text-align: center;
-    color: #ff0000;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-div {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-input[type="text"] {
-    padding: 10px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
+body { 
+    background-color: #090796; 
+    color: black; 
+    text-align: center; 
+    } 
+    
+    .container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    } 
+    
+    .heading { 
+    margin-bottom: 20px; 
+    font-size: 3rem; 
+    color: black; 
+    } 
+    
+    .header { 
+    display: flex; 
+    align-items: center; 
+    } 
+    
+    .timer, .errors, .accuracy, 
+    .cpm, .wpm { 
+    background-color: #512eab; 
+    height: 60px; 
+    width: 70px; 
+    margin: 8px; 
+    padding: 12px; 
+    border-radius: 20%; 
+    box-shadow: black 5px 8px 5px; 
+    } 
+    
+    .cpm, .wpm { 
+    display: none; 
+    } 
+    
+    .header_text { 
+    text-transform: uppercase; 
+    font-size: 0.6rem; 
+    font-weight: 600; 
+    } 
+    
+    .curr_time, .curr_errors, 
+    .curr_accuracy, .curr_cpm, 
+    .curr_wpm { 
+    font-size: 2.75rem; 
+    } 
+    
+    .quote { 
+    background-color: #088a98; 
+    font-size: 1.5rem; 
+    margin: 10px; 
+    padding: 25px; 
+    box-shadow: black 5px 8px 5px; 
+    } 
+    
+    .input_area { 
+    background-color: #aecfc6; 
+    height: 80px; 
+    width: 40%; 
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    margin: 15px; 
+    padding: 20px; 
+    border: 0px; 
+    box-shadow: black 5px 8px 5px; 
+    } 
+    
+    .restart_btn { 
+    display: none; 
+    background-color: #326765; 
+    font-size: 1.5rem; 
+    padding: 10px; 
+    border: 0px; 
+    box-shadow: black 5px 8px 5px; 
+    } 
+    
+    .incorrect_char { 
+    color: red; 
+    text-decoration: underline; 
+    } 
+    
+    .correct_char { 
+    color: darkgreen; 
+    } 
+    
