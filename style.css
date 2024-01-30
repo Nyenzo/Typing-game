@@ -60,6 +60,14 @@ h1 {
     border-radius: 5px;
     color: white;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#start:hover {
+    background-color: royalblue;
 }
 .highscore {
     font-size: 24px;
